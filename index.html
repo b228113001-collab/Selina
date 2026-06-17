@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="meta.title">電子名片 | 星野澪</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Home">
+      <span class="brand-mark">M</span>
+      <span data-i18n="nav.brand">星野澪</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about" data-i18n="nav.about">關於</a>
+      <a href="#works" data-i18n="nav.works">事蹟</a>
+      <a href="#contact" data-i18n="nav.contact">聯絡</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="langToggle" type="button" aria-label="Switch language">EN</button>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow split-text" data-i18n="hero.eyebrow">互動敘事設計師 / 前端魔法師</p>
+        <h1 class="hero-title split-text" data-i18n="hero.name">星野 澪</h1>
+        <p class="hero-lead" data-i18n="hero.lead">用程式、聲音與奇想，把一張普通名片變成會呼吸的微型宇宙。</p>
+        <div class="hero-tags" aria-label="Interests">
+          <span data-i18n="hero.tag1">遊戲 UI</span>
+          <span data-i18n="hero.tag2">電子音樂</span>
+          <span data-i18n="hero.tag3">星圖收藏</span>
+          <span data-i18n="hero.tag4">咖啡因研究</span>
+        </div>
+        <div class="hero-actions">
+          <a class="primary-btn magnetic" href="#contact" data-i18n="hero.cta">聯絡我</a>
+          <a class="ghost-btn magnetic" href="#works" data-i18n="hero.secondary">查看事蹟</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Profile visual">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="avatar-card">
+          <div class="avatar-glow"></div>
+          <div class="avatar-face">
+            <div class="hair"></div>
+            <div class="face">
+              <span class="eye left"></span>
+              <span class="eye right"></span>
+              <span class="mouth"></span>
+            </div>
+            <div class="jacket"></div>
+          </div>
+          <div class="scan-line"></div>
+        </div>
+        <div class="stat-chip chip-a">
+          <strong>128</strong>
+          <span data-i18n="hero.stat1">完成專案</span>
+        </div>
+        <div class="stat-chip chip-b">
+          <strong>9.8</strong>
+          <span data-i18n="hero.stat2">靈感指數</span>
+        </div>
+        <div class="stat-chip chip-c">
+          <strong>24/7</strong>
+          <span data-i18n="hero.stat3">夜間創作</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section-shell reveal">
+      <div class="section-heading">
+        <p data-i18n="about.kicker">Profile Archive</p>
+        <h2 data-i18n="about.title">關於我</h2>
+      </div>
+      <div class="about-grid">
+        <article class="glass-panel about-card">
+          <h3 data-i18n="about.cardTitle">虛構人物簡介</h3>
+          <p data-i18n="about.body">星野澪是一位住在台北的互動敘事設計師，擅長把前端動效、遊戲化介面與音景設計混在一起。她相信每個按鈕都該有個性，每段資料都能被編排成一場小型演出。</p>
+        </article>
+        <article class="glass-panel profile-list">
+          <div>
+            <span data-i18n="about.roleLabel">職稱</span>
+            <strong data-i18n="about.role">Creative Frontend Engineer</strong>
+          </div>
+          <div>
+            <span data-i18n="about.locationLabel">基地</span>
+            <strong data-i18n="about.location">台北 / 遠端銀河辦公室</strong>
+          </div>
+          <div>
+            <span data-i18n="about.toolsLabel">工具</span>
+            <strong data-i18n="about.tools">HTML, CSS, JS, GSAP, Web Audio</strong>
+          </div>
+          <div>
+            <span data-i18n="about.mottoLabel">座右銘</span>
+            <strong data-i18n="about.motto">資料也可以跳舞。</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="works" class="works section-shell reveal">
+      <div class="section-heading">
+        <p data-i18n="works.kicker">Achievement Log</p>
+        <h2 data-i18n="works.title">關於我 - 事蹟</h2>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item glass-panel">
+          <span class="year">2026</span>
+          <h3 data-i18n="works.item1Title">星塵履歷系統</h3>
+          <p data-i18n="works.item1Body">打造會根據觀看者互動改變排列的履歷網頁，讓面試官在 90 秒內看到最相關的能力節點。</p>
+        </article>
+        <article class="timeline-item glass-panel">
+          <span class="year">2025</span>
+          <h3 data-i18n="works.item2Title">月面市集 UI 套件</h3>
+          <p data-i18n="works.item2Body">設計一套霓虹、低延遲、可鍵盤操作的電商介面元件，獲得虛構設計獎金賞。</p>
+        </article>
+        <article class="timeline-item glass-panel">
+          <span class="year">2024</span>
+          <h3 data-i18n="works.item3Title">聲音記憶地圖</h3>
+          <p data-i18n="works.item3Body">把城市採樣聲轉換成互動式地圖，使用者能用游標混音自己的散步路線。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="skills section-shell reveal" aria-labelledby="skillsTitle">
+      <div class="section-heading">
+        <p data-i18n="skills.kicker">Signal Matrix</p>
+        <h2 id="skillsTitle" data-i18n="skills.title">能力矩陣</h2>
+      </div>
+      <div class="skill-grid">
+        <div class="skill-card glass-panel" style="--level: 92">
+          <span>UI Motion</span>
+          <strong>92%</strong>
+        </div>
+        <div class="skill-card glass-panel" style="--level: 86">
+          <span>JavaScript</span>
+          <strong>86%</strong>
+        </div>
+        <div class="skill-card glass-panel" style="--level: 78">
+          <span>Story Design</span>
+          <strong>78%</strong>
+        </div>
+        <div class="skill-card glass-panel" style="--level: 95">
+          <span>Curiosity</span>
+          <strong>95%</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section-shell reveal">
+      <div class="section-heading">
+        <p data-i18n="contact.kicker">Contact Channel</p>
+        <h2 data-i18n="contact.title">聯絡我</h2>
+      </div>
+      <div class="contact-grid">
+        <a class="contact-card glass-panel magnetic" href="mailto:mio.fake@example.com">
+          <span class="contact-icon">@</span>
+          <div>
+            <strong data-i18n="contact.email">電子郵件</strong>
+            <p>mio.fake@example.com</p>
+          </div>
+        </a>
+        <a class="contact-card glass-panel magnetic" href="#" aria-label="Instagram">
+          <span class="contact-icon">IG</span>
+          <div>
+            <strong>Instagram</strong>
+            <p>@mio.neon.archive</p>
+          </div>
+        </a>
+        <a class="contact-card glass-panel magnetic" href="#" aria-label="LinkedIn">
+          <span class="contact-icon">in</span>
+          <div>
+            <strong>LinkedIn</strong>
+            <p>/in/mio-hoshino-fake</p>
+          </div>
+        </a>
+        <a class="contact-card glass-panel magnetic" href="#" aria-label="Discord">
+          <span class="contact-icon">#</span>
+          <div>
+            <strong>Discord</strong>
+            <p>MioOrbit#0427</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footer.copy">© 2026 星野澪。這是一份使用假資料製作的電子名片。</p>
+  </footer>
+</body>
+</html>
